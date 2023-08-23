@@ -275,3 +275,13 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 840ms (Views: 100.3ms | ActiveRecord: 0.0ms | Allocations: 303862)
 
 
+Started GET "/" for 127.0.0.1 at 2023-08-22 21:43:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1116)
+  Rendered layout layouts/application.html.erb (Duration: 63.0ms | Allocations: 20786)
+Completed 200 OK in 331ms (Views: 90.7ms | ActiveRecord: 0.0ms | Allocations: 304523)
+
+
