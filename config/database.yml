@@ -1,0 +1,27 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: ecommerceni_dev
+  username: ecommerceni_dev_user
+  password: <%= Rails.application.credentials.db_password %>
+  host: 127.0.0.1
+test:
+  <<: *default
+  database: ecommerceni_test
+  username: ecommerceni_test_user
+  host: 127.0.0.1
+
+
+production:
+  <<: *default
+  database: e_commerce_production
+  username: ecommerceni_prod_user
+  password: <%= ENV["E_COMMERCE_DATABASE_PASSWORD"] %>
+  host: definir.com.br
